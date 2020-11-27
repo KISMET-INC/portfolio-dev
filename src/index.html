@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+
+{% set page ='home' %}
+
+{% block meta %}
+  <title>www.Kristen-SanMartin.com</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% endblock %}
+
+{% block content %}
+
+  {% include "parts/hero.html" %}
+
+  <main id="main">
+
+    {% include "parts/about-section.html" %}
+
+    {% include "parts/projects-section.html" %}
+
+    {% include "parts/challenges-section.html" %}
+
+    {% include "parts/contact-section.html" %}
+
+  </main><!-- End #main -->
+
+{% endblock %}

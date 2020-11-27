@@ -1,0 +1,73 @@
+{% extends "template.html" %}
+
+{% set page ='portfolio' %}
+
+{% block meta %}
+  <title>Project Details - Garage Sally</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% endblock %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+    
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Garage Sally</li>
+          </ol>
+        </div>
+        
+      </div>
+    </section><!-- End Breadcrumbs -->
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="portfolio-details-container">
+
+        <div class="owl-carousel portfolio-details-carousel">
+          <img src="assets/img/portfolio/garage_sally/garage_sally_big.jpg" class="img-fluid" alt="">
+        </div>
+
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Name</strong>: Garage Sally</li>
+            <li><strong>Category</strong>: Front-End Engineering | Collaborative </li>
+            <li><strong>Tech</strong>: MERN | RESTFUL APIs| SPA | GitHub </li>
+            <li><strong>Project date</strong>: 01 Nov, 2020</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="portfolio-description">
+        <h2>Network for people to search and post local garage sales.</h2>
+        <ul>
+          <li>Defined database queries to Garage Sally’s <b>Non-Relational, NoSQL database (MongoDB)</b> using
+          Axios a nd Javascript’s N ODE.js allowing users to view all local posts and details of specific sales.</li>
+          <p></p>
+          <li>Interpreted incoming <b>RESTFUL API</b> data from Google Maps API t o generate maps, location markers
+          and directions cultivating superior convenience for the user.</li>
+          <p></p>
+          <li> United front-end <b>REACT</b> render elements to front end query logic generating a link betwee user interface , server and database.</li>
+          <p></p>
+          <li> Utilized <b> Git and Github</b>b for version control which kept a working history of the applications development process as well as the emergence of different versions.</li>
+
+        </ul>          
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Details Section -->
+    
+
+  </main><!-- End #main -->
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends "template.html" %}
+
+{% set page ='portfolio' %}
+
+{% block meta %}
+  <title>Coding Challenge</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% endblock %}
+
+{% block content %}
+
+  <main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+   <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Coding Challenge</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Calculating with Functions</li>
+        </ol>
+      </div>
+      <b>This time we want to write calculations using functions and get the results.</b>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+   <!-- ======= Challenge Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="portfolio-details-container">
+
+        <div class="owl-carousel portfolio-details-carousel">
+          <img src="assets/img/codewars.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="challenge-box">
+          <h3 class = "purple">Calculating with functions</h3>
+
+          <div class="form-group">
+            <label for ='function'>Input a function to solve: </label>
+            <p><input id = "function" type= 'string' value = 'seven(times(five()))'></p>
+            <p class= 'errors' id='error'></p>
+          </div>
+          
+          <button onClick="challenge()">Submit</button>
+        </div>
+
+        <div class="challenge-box-result">
+
+      <div class="form-group">
+          <h3 class="purple">Result </h3>
+          <p>The answer to life, the universe, and everything.</p>
+          <div id = 'result' class = "result col-12"></div>
+        </div>
+        <a href="assets/img/calculating-functions.jpg" data-gall="portfolioGallery" class="venobox" title="Calculting with Functions"><i class="bx bx-plus"></i>View Code</a>
+        </div>
+
+      </div>
+
+      <div class="portfolio-description">
+          <h2>Instructions:</h2>
+          <p>This time we want to write calculations using functions and get the results. Let's have a look at some examples:</p>
+          <h2>Output / Examples:</h2>
+        <div class = "codeWindow"> 
+          <p>seven(times(five())); // must return 35</p>
+          <p>four(plus(nine())); // must return 13</p>
+          <p>eight(minus(three())); // must return 5</p>
+          <p>six(dividedBy(two())); // must return 3</p>
+      </div>
+      <h2>Requirements:</h2>
+      <ul>
+        <li>There must be a function for each number from 0 ("zero") to 9 ("nine")</li>
+        <li>There must be a function for each of the following mathematical operations: plus, minus, times, dividedBy (divided_by in Ruby and Python)</li>
+        <li>Each calculation consist of exactly one operation and two numbers</li>
+        <li>The most outer function represents the left operand, the most inner function represents the right operand</li>
+        <li>Division should be integer division. For example, this should return 2, not 2.666666...:</li>
+      </ul>
+      
+      <div class = "codeWindow">
+        <p>eight(dividedBy(three()));</p>
+      </div>
+    </div>
+  </section><!-- End Challenge Details Section -->
+
+  </main><!-- End #main -->
+  <script>
+
+    function challenge() {
+    
+      function zero(n)  { return Math.floor(eval(makeString(n,0)))}
+      function one(n)   { return Math.floor(eval(makeString(n,1)))}
+      function two(n)   { return Math.floor(eval(makeString(n,2)))}
+      function three(n) { return Math.floor(eval(makeString(n,3)))}
+      function four(n)  { return Math.floor(eval(makeString(n,4)))}
+      function five(n)  { return Math.floor(eval(makeString(n,5)))}
+      function six(n)   { return Math.floor(eval(makeString(n,6)))}
+      function seven(n) { return Math.floor(eval(makeString(n,7)))}
+      function eight(n) { return Math.floor(eval(makeString(n,8)))}
+      function nine(n)  { return Math.floor(eval(makeString(n,9)))}
+      
+      function plus(n)  { return `+ ${n}`}
+      function minus(n) { return `- ${n}`}
+      function times(n) { return `* ${n}`}
+      function dividedBy(n) { return `/ ${n}`}
+      
+      function makeString(n,v){
+        var str = n == undefined ? v : str = v + n
+        return str
+      }
+      // Get variables from document
+      var m = document.getElementById('function').value;
+      try {
+        eval(m)
+      } catch (err){
+        document.getElementById('error').innerHTML = "There was a problem with your function. Operands must be between zero and nine and operators must be either plus, minus, dividedBy, or times"
+      }
+      
+      document.getElementById('result').innerHTML = eval(m)
+      document.getElementById('error').innerHTML = ""
+    
+    }
+    
+    </script>
+
+{% endblock %}

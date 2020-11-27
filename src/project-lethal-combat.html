@@ -1,0 +1,77 @@
+{% extends "template.html" %}
+
+{% set page ='portfolio' %}
+
+{% block meta %}
+  <title>Project Details - Garage Sally</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% endblock %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+    
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Lethal Combat</li>
+          </ol>
+        </div>
+        
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <h2><a href ="https://simmer.io/@kmoreland909/lethal-combat-v2" add target="_blank" >Play Lethal Combat on Simmer.IO!</a></h2>
+        <p>When you get there...Choose me!</p>
+        <div class="portfolio-details-container">
+          <div class="owl-carousel portfolio-details-carousel">
+            <iframe src="https://i.simmer.io/@kmoreland909/lethal-combat-v2" style="width:1280px;height:960px"></iframe>
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Project Name [ </strong> Lethal Combat <b>]</b></li>
+              <li><strong>My Role [ </strong> Project Manager <b>|</b> Lead Developer  <b>]</b></li>
+              <li><strong>Category [</strong> Game Development <b>|</b> Collaborative  <b>]</b></li>
+              <li><strong>Team [ </strong>Kristen San Martin <b>|</b> Kim Greenbush <b>]</b></li>
+              <li><strong>Tech [ </strong>C# <b>|</b> Unity <b>|</b> GitHub <b>]</b> </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>Turn-Based RPG</h2>
+          <ul>
+            <li>Project Manager of a collaborative coding effort based heavily around OOP techniques, written in C#
+              and utilizing the Unity game engine.</li>
+            <p></p>
+            <li>Developed schedules and encouraged daily meetups in order to track progress and keep the team
+              on pace to meet intense production deadlines.</li>
+            <p></p>
+            <li> Helped other developers achieve their goals by aiding them with their code implementations and
+              helping to debug code.</li>
+          </ul>   
+          <h2>Why did I choose this technology?</h2> 
+          <h2>What challenges did I face?</h2> 
+          <h2>What would I have done differently?</h2> 
+          <h2>What did I learn?</h2> 
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
+  </main><!-- End #main -->
+
+{% endblock %}

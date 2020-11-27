@@ -1,0 +1,75 @@
+{% extends "template.html" %}
+
+{% set page ='portfolio' %}
+
+{% block meta %}
+  <title>Project Details - Garage Sally</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% endblock %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+    
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>FairEST</li>
+          </ol>
+        </div>
+        
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+     <!-- ======= Portfolio Details Section ======= -->
+     <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="assets/img/portfolio/fair_est/fair_est_big.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/fair_est/fair_est_big_02.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Name</strong>: FairEST</li>
+              <li><strong>Category</strong>: Full Stack Development</li>
+              <li><strong>Tech</strong>: Python | Django ORM | JQuery</li>
+              <li><strong>Project date</strong>: 01 Sept, 2020</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>Estimates grooming services</h2>
+          <p>
+            ● Developed an algorithm in <b>Python</b> that estimates grooming services and improves customer
+            confidence by offering clear, consistent itemized service estimates based on weight and coat type instead of by breed.
+          </p>
+          <p>
+            ● Used the <b>Django ORM</b> for a clean interface between server and database, as well as intuitive
+            relationships between O OP models for a smooth UX
+          </p>
+          <p>
+            ● Wrote scripts in <b>JQuery</b> and Javascript that enhance the user experience with exciting dynamic
+            animations and interactions.
+          </p>
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
