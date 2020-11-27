@@ -914,6 +914,7 @@ textarea {
   }
   .challenge-box-result {
     position: static;
+    width:100%;
     margin-top: 30px;
   }
 
@@ -965,4 +966,21 @@ iframe {
     height: 363px;
   }
 
+}
+
+.primary {
+  color: $primary,
+}
+
+#questions {
+  
+  width: 100%;
+  padding: 40px;
+  height: 300px;
+  
+
+  h2 {
+    font-size: 20px;
+    color: $primary;
+  }
 }
