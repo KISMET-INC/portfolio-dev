@@ -987,3 +987,19 @@ iframe {
     color: $primary;
   }
 }
+
+.video_projects {
+  display:flex;
+ }
+ 
+ 
+ @media (max-width: 1000px) {
+   .video_projects{
+     display: unset;
+   }
+  }
+ 
+ 
+ video {
+   width:95%;
+ }
