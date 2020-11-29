@@ -24,8 +24,12 @@ const dependencies = require('./dependencies.json');
 
 const distDir = './dist/';
 
+// Template credits
 const credits = [
-
+  '* Template Name: ' + pkg.title + ' - v' + pkg.version,
+  '* Template URL: ' + pkg.homepage,
+  '* Author: ' + pkg.author,
+  '* License: ' + pkg.license
 ];
 
 // Clean up the dist folder before running any task
