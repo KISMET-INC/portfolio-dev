@@ -2,7 +2,7 @@
 
 
 ## Description
-**[KISMET-INC.github.io](https://kismet-inc.github.io/index.html)** is a website to display my body of work as a **Full Stack Web Developer**. It has been launched based off of a Bootstrap template in order for all my previous work to be ready to view in a timely manner post graduation. This development project uses Node.js as backend environment, **[NPM](https://nodejs.org/en/)** as a package manager, **[Gulp.js](https://gulpjs.com/)** as a task manager and **[Nunjucks](https://mozilla.github.io/nunjucks/)** as a templating engine to generate HTML5, CSS, Javascript. 
+**[KISMET-INC.github.io](https://kismet-inc.github.io/index.html)** is a website to display my body of work as a **Full Stack Web Developer**. It has been launched based off of a Bootstrap template so that all of my previous work would be ready to view in a timely manner post graduation. This development project uses Node.js as backend environment, **[NPM](https://nodejs.org/en/)** as a package manager, **[Gulp.js](https://gulpjs.com/)** as a task manager and **[Nunjucks](https://mozilla.github.io/nunjucks/)** as a templating engine to generate HTML5, CSS, Javascript. 
 
 
 ## What I Learned From the Template
