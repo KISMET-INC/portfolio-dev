@@ -2,11 +2,11 @@
 
 
 ## Description
-[Kismet-INC.github.io](https://kismet-inc.github.io/index.html) is a website to display my body of work as a **Full Stack Web Developer** in a clean professional manner. It is based on a Bootstrap template in order to be ready to view in a timely manner post graduation. This development project uses Node.js as backend environment, **[NPM](https://nodejs.org/en/)** as a package manager, **[Gulp.js](https://gulpjs.com/)** as a task manager and **[Nunjucks](https://mozilla.github.io/nunjucks/)** as a templating engine to generate HTML5, CSS, Javascript. 
+**[KISMET-INC.github.io](https://kismet-inc.github.io/index.html)** is a website to display my body of work as a **Full Stack Web Developer** in a clean professional manner. It is based on a Bootstrap template in order to be ready to view in a timely manner post graduation. This development project uses Node.js as backend environment, **[NPM](https://nodejs.org/en/)** as a package manager, **[Gulp.js](https://gulpjs.com/)** as a task manager and **[Nunjucks](https://mozilla.github.io/nunjucks/)** as a templating engine to generate HTML5, CSS, Javascript. 
 
 
 ## What I Learned From the Template
-This project uses **SCSS**  for its stylesheets. The individual parts of the webpage have their own *.scss files to be edited. Upon compiling with **[Gulp.js](https://gulpjs.com/)** the SCSS files are combined into a single CSS file. 
+This project uses SCSS  for its stylesheets. The individual parts of the webpage have their own *.scss files to be edited. Upon compiling with **[Gulp.js](https://gulpjs.com/)** the SCSS files are combined into a single CSS file. 
 
 Gulp also utiizes the templating engine **[Nunjucks](https://mozilla.github.io/nunjucks/)** to compile the final html files, identifing the Nunjucks template variables and replacing each with snippets of code wrapped with content identifier tags such as {% block content %} or by id. 
 
@@ -39,7 +39,7 @@ Open the project directory with your cmd or terminal and run the following comma
 
 
 ## Support
-Any questions or comments about this repository can be emailed to kmoreland909@gmail.com.
+Any questions or comments about this repository can be emailed to **kmoreland909@gmail.com**.
 
 ## Roadmap
 As I get better and upgrade my projects or add new ones this website will be constantly updated to reflect that. Bookmark the deployment url for this site, KISMET-INC.github.io to see what I add to it in the future.
@@ -48,4 +48,4 @@ As I get better and upgrade my projects or add new ones this website will be con
 I am not accepting contributions to this project at this time.
 
 ## Authors and acknowledgment
-Thank you to [BootStrapMade](https://bootstrapmade.com/) for supplying an easy to use template to launch and learn from.
+Thank you to **[BootStrapMade](https://bootstrapmade.com/)** for supplying an easy to use template to launch and learn from.
