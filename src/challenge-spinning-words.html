@@ -11,23 +11,31 @@
 {% block content %}
 
   <main id="main">
+    
  <!-- ======= Breadcrumbs ======= -->
  <section id="breadcrumbs" class="breadcrumbs">
+   
   <div class="container">
 
     <div class="d-flex justify-content-between align-items-center">
+
       <h2>Coding Challenge</h2>
       <ol>
         <li><a href="index.html">Home</a></li>
         <li>Stop gninnipS My sdroW!</li>
-      </ol>
+      </ol> 
+
     </div>
+
     <b>Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata).</b>
+  
   </div>
+
 </section><!-- End Breadcrumbs -->
 
    <!-- ======= Challenge Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
+
       <div class="container">
 
         <div class="portfolio-details-container">
@@ -36,7 +44,9 @@
             <img src="assets/img/codewars.png" class="img-fluid" alt="">
           </div>
 
+          <!-- Input -->
           <div class="challenge-box">
+
             <h3 class = "purple">Stop gninnipS My sdroW!</h3>
 
             <div class="form-group">
@@ -45,71 +55,91 @@
               <p class='errors' id= 'error'></p>
             </div>
 
-            
             <button onClick="challenge()">Submit</button>
+
           </div>
 
+          <!-- Result -->
           <div class="challenge-box-result">
 
-        <div class="form-group">
-            <h3 class="purple">Result </h3>
-            <p>HA! We spun your words anyway!</p>
-            <div id = 'result' class = "result col-12"></div>
-          </div>
-          <a href="assets/img/spinning-words.jpg" data-gall="portfolioGallery" class="venobox" title="Stop gninnipS My sdroW!"><i class="bx bx-plus"></i>View Code</a>
+            <div class="form-group">
+              <h3 class="purple">Result </h3>
+              <p>HA! We spun your words anyway!</p>
+              <div id = 'result' class = "result col-12"></div>
+            </div>
+            
+            <a href="assets/img/spinning-words.jpg" data-gall="portfolioGallery" class="venobox" title="Stop gninnipS My sdroW!"><i class="bx bx-plus"></i>View Code</a>
+          
           </div>
 
         </div>
 
+        <!-- Instructions and Examples -->
         <div class="portfolio-description">
+
             <h2>Instructions:</h2>
             <p>Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
             <h2>Output / Examples:</h2>
+
           <div class = "codeWindow"> 
             <p>spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"</p>
             <p>spinWords( "This is a test") => returns "This is a test" </p>
             <p>spinWords( "This is another test" )=> returns "This is rehtona test"</p>
         </div>
+
       </div>
+
     </section><!-- End Challenge Details Section -->
 
   </main><!-- End #main -->
+
   <script>
 
     function challenge() {
+
+      // Get input from DOM
       var sentence = document.getElementById('sentence').value;
       var array = sentence.split(" ");
       var revArray = []
-    
+      
+      // Validate input for letters
       var lettersOnly = /^[a-zA-Z]+$/
       
+      // Interate over each word
       for(var i= 0; i < array.length ; i++){
+
         let tempWord  = "";
+
+        // Check if current word contains special characters if so, throw validation error
         if(!array[i].match(lettersOnly)){
           document.getElementById('error').innerHTML = "There was a problem with your sentence. Only words and spaces are allowed"
           return;
         }
-    
+        
+        // If word length is less than or equal to five spin letters and push to result
         if(array[i].length >= 5){
           for(var j = array[i].length-1; j >= 0; j--){
             tempWord += array[i][j]
           }
+        
+        // Push word to result as is
         } else {
-    
           tempWord += array[i]
         }
-    
+        
+        // Dont push an ending space on fina word
         if(i == array.length-1){
           revArray.push(tempWord)
         } else {
           revArray.push(tempWord + " ")
         }
       }
-      
+
+      // Return result to DOM
       document.getElementById('result').innerHTML =  revArray.join("")
-    
+
     }
-    
+  
     </script>
 
 {% endblock %}
