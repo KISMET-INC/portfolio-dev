@@ -12,23 +12,30 @@
 
   <main id="main">
 
-  <!-- ======= Breadcrumbs ======= -->
-  <section id="breadcrumbs" class="breadcrumbs">
-    <div class="container">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h2>Coding Challenge</h2>
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Double Cola</li>
-        </ol>
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+          <h2>Coding Challenge</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Double Cola</li>
+          </ol>
+
+        </div>
+
+        <b>Sheldon, Leonard, Penny, Rajesh and Howard are in the queue for a "Double Cola" drink vending machine. The first one in the queue (Sheldon) buys a can, drinks it and doubles! The resulting two Sheldons go to the end of the queue. Then the next in the queue (Leonard) buys a can, drinks it and gets to the end of the queue as two Leonards, and so on.</b>
+      
       </div>
-      <b>Sheldon, Leonard, Penny, Rajesh and Howard are in the queue for a "Double Cola" drink  vending machine. The first one in the queue (Sheldon) buys a can, drinks it and doubles! The resulting two Sheldons go to the end of the queue. Then the next in the queue (Leonard) buys a can, drinks it and gets to the end of the queue as two Leonards, and so on.</b>
-    </div>
-  </section><!-- End Breadcrumbs -->
+      
+    </section><!-- End Breadcrumbs -->
 
-  <!-- ======= Challenge Details Section ======= -->
+    <!-- ======= Challenge Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
+
       <div class="container">
 
         <div class="portfolio-details-container">
@@ -37,81 +44,109 @@
             <img src="assets/img/codewars.png" class="img-fluid" alt="">
           </div>
 
+          <!-- Input -->
           <div class="challenge-box">
+
             <h3 class = "purple">Double Cola</h3>
-           
+          
             <div class="form-group">
               <label for ='input'>Input a number: </label>
               <p><input class="col-6" id = 'number' value='7230702951' type = 'number'></p>
             </div>
+
             <div class="form-group">
               <label for ='name'>Input a list of names seperated by commas : </label>
               <p><textarea class = 'col-12' id = 'names' type = 'text'>Sheldon, Leonard, Penny, Rajesh, Howard</textarea></p>
             </div>
             
             <button onClick="challenge()">Submit</button>
+
           </div>
 
+          <!-- Result -->
           <div class="challenge-box-result">
 
-        <div class="form-group">
-            <h3 class="purple">Result </h3>
-            <p>The person who will drink the N'th cola :</p>
-            <div id = 'result' class = "result col-12"></div>
-          </div>
-          <a href="assets/img/double_cola.JPG" data-gall="portfolioGallery" class="venobox" title="Double Cola"><i class="bx bx-plus"></i>View Code</a>
+            <div class="form-group">
+
+                <h3 class="purple">Result </h3>
+                <p>The person who will drink the N'th cola :</p>
+
+                <div id = 'result' class = "result col-12"></div>
+
+            </div>
+
+            <a href="assets/img/challenges/double_cola.JPG" data-gall="portfolioGallery" class="venobox" title="Double Cola"><i class="bx bx-plus"></i>View Code</a>
+      
           </div>
 
         </div>
 
+        <!-- Instructions and Examples -->
         <div class="portfolio-description">
           <h2>Instructions:</h2>
 
           <p>Sheldon, Leonard, Penny, Rajesh and Howard are in the queue for a "Double Cola" drink  vending machine; there are no other people in the queue. The first one in the queue (Sheldon) buys a can, drinks it and doubles! The resulting two Sheldons go to the end of the queue. Then the next in the queue (Leonard) buys a can, drinks it and gets to the end of the queue as two Leonards, and so on.</p>
           <p>For example, Penny drinks the third can of cola and the queue will look like this:</p>
 
-            <div class="codeWindow"> Rajesh, Howard, Sheldon, Sheldon, Leonard, Leonard, Penny, Penny </div>
-            <h2>Input:</h2>
-            <p>The input data consist of an array which contains at least 1 name, and single integer n which may go as high as the biggest number your language of choice supports (if there's such limit, of course).</p>
+          <div class="codeWindow"> Rajesh, Howard, Sheldon, Sheldon, Leonard, Leonard, Penny, Penny </div>
+
+          <h2>Input:</h2>
+          <p>The input data consist of an array which contains at least 1 name, and single integer n which may go as high as the biggest number your language of choice supports (if there's such limit, of course).</p>
             
-            <h2>Output / Examples:</h2>
-            <p>Return the single line — the name of the person who drinks the n-th can of cola. The cans are numbered starting from 1.</p>
+          <h2>Output / Examples:</h2>
+          <p>Return the single line — the name of the person who drinks the n-th can of cola. The cans are numbered starting from 1.</p>
+          
           <div class = "codeWindow"> 
             <p>whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 1) == "Sheldon"</p>
             <p>whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 52) == "Penny"</p>
-            <p>whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951) == "Leonard"</p>
-          
+            <p>whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951) == "Leonard"</p> 
         </div>
 
       </div>
+
     </section><!-- End Challenge Details Section -->
 
-
   </main><!-- End #main -->
+
   <script>
 
     function challenge(){
-    var r = parseInt(document.getElementById('number').value);
-    var namesSTR = document.getElementById('names').value;
-    var names = namesSTR.split(',')
-    let min = 0
-        let max = names.length
-        let doubler = 1;
-        
-        while(max < r){
-            doubler *= 2
-            min = max + 1
-            max = max + (names.length * doubler)
-            
-        }
-        
-        if(min == 0){
-          return names[r-1]
-        }
-        let next = Math.floor((r - min)/doubler)
-        
-        document.getElementById('result').innerHTML =  names[next]
+    
+      //Get inputs from DOM and convert to numbers as needed
+      var r = parseInt(document.getElementById('number').value);
+      var namesSTR = document.getElementById('names').value;
+      var names = namesSTR.split(',')
+      // lowBound and highBound track boundaries of doubled names each cycle
+      // ex: the first boundary is between 1 and names.length,
+      // next cycle the low bound  moves to names.length + 1  and high bound move to names.length * x^i 
+      let lowBound = 0
+      let highBound = names.length
+      let doubler = 1;
+          
+      // Iterate 'r' number of times
+      while(highBound < r){
+
+          // by start of each cycle number of each name is doubled [2, 4 , 6 ,8]
+          doubler *= 2
+          // move lowBound and highBound
+          lowBound = highBound + 1
+          highBound = highBound + (names.length * doubler)
+          
+      }
+      // if lowbound is still 0, we are still within the very first cycle and have
+      // not encounterd any doubles, return the name from the original array accounting for off by one
+      if(lowBound == 0){
+        return names[r-1]
+      }
+
+      // using r and subtracting off all numbers before it, and dividing off how many times the names were 
+      // doubled leaves us with an index in our original array.
+      let next = Math.floor((r - lowBound)/doubler)
+
+      // return the name in this index as it is the person drinking the n'th Double Cola
+      document.getElementById('result').innerHTML =  names[next]
     }
+
   </script>
   
 {% endblock %}
