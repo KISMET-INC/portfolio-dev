@@ -14,122 +14,156 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
+
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
+
           <h2>Coding Challenge</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Last Digit</li>
           </ol>
+
         </div>
-        <b>Define a function that takes in two non-negative integers a and b and returns the last decimal digit of a^b. Note that a and b may be very large!</b>
+
+        <b>Define a function that takes in two non-negative integers a and b and returns the last decimal digit of a<sub>b</sub>. Note that a and b may be very large!</b>
+      
       </div>
+
     </section><!-- End Breadcrumbs -->
 
-  <!-- ======= Challenge Details Section ======= -->
-  <section id="portfolio-details" class="portfolio-details">
-    <div class="container">
+    <!-- ======= Challenge Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
 
-      <div class="portfolio-details-container">
+      <div class="container">
 
-        <div class="owl-carousel portfolio-details-carousel">
-          <img src="assets/img/codewars.png" class="img-fluid" alt="">
-        </div>
+        <div class="portfolio-details-container">
 
-        <div class="challenge-box">
-          <h3 class = "purple">Last Digit</h3>
-
-          <div class="form-group">
-            <label for ='a'>Input a number 'a' : </label>
-            <input id = "a" type= 'number' value = '10'>
-            <p class='errors' id= 'errorA'></p>
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="assets/img/codewars.png" class="img-fluid" alt="">
           </div>
 
-          <div class="form-group">
-            <label for ='b'>Input a number 'b' : </label>
-            <input id = "b" type= 'number' value = '10000000000'>
-            <p class='errors' id= 'errorB'></p>
+          <!-- Input -->
+          <div class="challenge-box">
+
+            <h3 class = "purple">Last Digit</h3>
+
+            <div class="form-group">
+              <label for ='a'>Input a number 'a' : </label>
+              <input id = "a" type= 'number' value = '10'>
+              <p class='errors' id= 'errorA'></p>
+            </div>
+
+            <div class="form-group">
+              <label for ='b'>Input a number 'b' : </label>
+              <input id = "b" type= 'number' value = '10000000000'>
+              <p class='errors' id= 'errorB'></p>
+            </div>
+            
+            <button onClick="challenge()">Submit</button>
+
           </div>
+
+          <!-- Result -->
+          <div class="challenge-box-result">
+
+            <div class="form-group">
+
+              <h3 class="purple">Result </h3>
+              <p>The last digit.</p>
+
+              <div id = 'result' class = "result col-12"></div>
+
+            </div>
+
+            <a href="assets/img/challenges/last-digit.jpg" data-gall="portfolioGallery" class="venobox" title="Last Digit"><i class="bx bx-plus"></i>View Code</a>
           
-          <button onClick="challenge()">Submit</button>
+          </div>
+
         </div>
 
-        <div class="challenge-box-result">
+        <!-- Instructions / Examples -->
+        <div class="portfolio-description">
 
-      <div class="form-group">
-          <h3 class="purple">Result </h3>
-          <p>The last digit.</p>
-          <div id = 'result' class = "result col-12"></div>
+            <h2>Instructions:</h2>
+            <p>Define a function that takes in two non-negative integers a and b and returns the last decimal digit of a<sup>b</sup>. Note that a and b may be very large!
+            <p>For example, the last decimal digit of 9<sup>7</sup> is 9, since 9<sup>7</sup>= 47829699.</p> 
+            <p>The last decimal digit of (2<sup>200</sup>)<sup>2<sup>300</sup></sup> , which has over 10<sup>92</sup> decimal digits, is 6. Also, please take 0<sup>0</sup> to be 1.
+            <p>You may assume that the input will always be valid.</p>
+            <h2>Output / Examples:</h2>
+            
+            <div class = "codeWindow"> 
+              <p>lastDigit("4", "1")            // returns 4</p>
+              <p>lastDigit("4", "2")            // returns 6</p>
+              <p>lastDigit("9", "7")            // returns 9 </p>
+              <p>lastDigit("10","10000000000")  // returns 0</p>
+            </div>
+
         </div>
-        <a href="assets/img/last-digit.jpg" data-gall="portfolioGallery" class="venobox" title="Last Digit"><i class="bx bx-plus"></i>View Code</a>
-        </div>
-
-      </div>
-
-      <div class="portfolio-description">
-          <h2>Instructions:</h2>
-          <p>Define a function that takes in two non-negative integers a and b and returns the last decimal digit of a<sup>b</sup>. Note that a and b may be very large!
-          <p>For example, the last decimal digit of 9<sup>7</sup> is 9, since 9<sup>7</sup>= 47829699.</p> 
-          <p>The last decimal digit of (2<sup>200</sup>)<sup>2<sup>300</sup></sup> , which has over 10<sup>92</sup> decimal digits, is 6. Also, please take 0<sup>0</sup> to be 1.
-          <p>You may assume that the input will always be valid.</p>
-          <h2>Output / Examples:</h2>
-        <div class = "codeWindow"> 
-          <p>lastDigit("4", "1")            // returns 4</p>
-          <p>lastDigit("4", "2")            // returns 6</p>
-          <p>lastDigit("9", "7")            // returns 9 </p>
-          <p>lastDigit("10","10000000000")  // returns 0</p>
-      </div>
-    </div>
-  </section><!-- End Challenge Details Section -->
+        
+    </section><!-- End Challenge Details Section -->
 
   </main><!-- End #main -->
- <script>
 
-function challenge() {
+<script>
 
-  var a = Math.round(document.getElementById('a').value);
-  var b = Math.round(document.getElementById('b').value);
+  function challenge() {
 
-  if (a < 0 || b < 0 ){
-    if (a < 0 ) {
-      document.getElementById('errorA').innerHTML = "This value must be positive."
+    // Get numbers from the DOM and round if needed
+    var a = Math.round(document.getElementById('a').value);
+    var b = Math.round(document.getElementById('b').value);
+
+    // Validate that both numbers are postive
+    if (a < 0 || b < 0 ){
+      if (a < 0 ) {
+        document.getElementById('errorA').innerHTML = "This value must be positive."
+      }
+      if(b < 0 ){
+        document.getElementById('errorB').innerHTML = "This value must be positive."
+      }
+      return;
     }
-    if(b < 0 ){
-      document.getElementById('errorB').innerHTML = "This value must be positive."
-    }
-    return;
-  }
-  
-  var lastDigitA = a%10;
-  var bMod4 = b%100;
-  var aLength = a.toString().length
+    
+    // Break off last digit of a
+    var lastDigitA = a % 10;
+    // Break off last two digits of b
+    var bMod = b % 100;
+    // Convert a to string to check original length
+    var aLength = a.toString().length
 
-
-  if(aLength == 2 && lastDigitA == 0 && bMod4 == 0){
-    document.getElementById('result').innerHTML = 1
-    return;
-  }
-
-  if(bMod4 == 0 && lastDigitA == 0){
-    document.getElementById('result').innerHTML = 0
-    return;
-  }
-
-    if(bMod4 == 0) { 
-      document.getElementById('result').innerHTML = Math.pow(lastDigitA,bMod4)
+    // Edge case 
+    if(aLength == 2 && lastDigitA == 0 && bMod == 0){
+      document.getElementById('result').innerHTML = 1
+      return;
     }
 
-    bMod4 = bMod4 % 4
+    // Edge case
+    if(bMod == 0 && lastDigitA == 0){
+      document.getElementById('result').innerHTML = 0
+      return;
+    }
 
+    // Edge case
+    if(bMod == 0) { 
+      document.getElementById('result').innerHTML = Math.pow(lastDigitA,bMod)
+    }
+
+    // Mathematical Pattern: If the number is a factor of 4 the last digit of that number to the power of 4 is itself.
+    // All we really need to solve this problem are the last two digits of a, and the last digit of b
+    let bMod4 = bMod % 4
+
+    // After breaking off the last digit of the input, if this number is a factor of 4, 
+    // we use 4 because by mulitplying the number by 4 the last digit is the same number we put in.
     if(bMod4 == 0){
-      document.getElementById('result').innerHTML = Math.pow(lastDigitA, 4)%10
-        
+      document.getElementById('result').innerHTML = Math.pow(lastDigitA, 4) % 10
+      
+    // Otherwise we use the offset from 4 as the power, because taking the number to this power, the last digit will be the number we put in.
     } else {
-      document.getElementById('result').innerHTML = Math.pow(lastDigitA,bMod4)%10     
+      document.getElementById('result').innerHTML = Math.pow(lastDigitA,bMod4) % 10     
     }
 
-}
+  }
 
 </script>
 

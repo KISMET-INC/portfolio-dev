@@ -14,21 +14,28 @@
 
   <!-- ======= Breadcrumbs ======= -->
   <section id="breadcrumbs" class="breadcrumbs">
+
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
+
         <h2>Coding Challenge</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
           <li>Integers: Recreation One</li>
         </ol>
+
       </div>
+
       <b>Given two integers m and n find all integers between m and n whose sum of squared divisors is itself a square. 42 is such a number.</b>
+    
     </div>
+
   </section><!-- End Breadcrumbs -->
   
  <!-- ======= Challenge Details Section ======= -->
  <section id="portfolio-details" class="portfolio-details">
+
   <div class="container">
 
     <div class="portfolio-details-container">
@@ -37,7 +44,9 @@
         <img src="assets/img/codewars.png" class="img-fluid" alt="">
       </div>
 
+      <!-- Input -->
       <div class="challenge-box">
+
         <h3 class = "purple">Integers: Recreation One</h3>
 
         <div class="form-group">
@@ -45,6 +54,7 @@
           <p><input id = "m" type= 'number' value = '42'></p>
           <p class= 'errors' id='errorM'></p>
         </div>
+
         <div class="form-group">
           <label for ='n'>Input a number 'n' greater than m: </label>
           <p><input id="n" type= 'number' value = '250'></p>
@@ -52,37 +62,45 @@
         </div>
         
         <button onClick="challenge()">Submit</button>
+
       </div>
 
+      <!-- Result -->
       <div class="challenge-box-result">
 
-    <div class="form-group">
+      <div class="form-group">
         <h3 class="purple">Result </h3>
         <p>TUPLES! (because it's fun to say...)</p>
         <div id = 'result' class = "result col-12"></div>
       </div>
-      <a href="assets/img/recreation-one.jpg" data-gall="portfolioGallery" class="venobox" title="Integers: Recreation One"><i class="bx bx-plus"></i>View Code</a>
-      </div>
 
-    </div>
-
-    <div class="portfolio-description">
-        <h2>Instructions:</h2>
-        <p>Divisors of 42 are : 1, 2, 3, 6, 7, 14, 21, 42. These divisors squared are: 1, 4, 9, 36, 49, 196, 441, 1764. The sum of the squared divisors is 2500 which is 50 * 50, a square!
-
-          Given two integers m, n (1 <= m <= n) we want to find all integers between m and n whose sum of squared divisors is itself a square. 42 is such a number.</p>
-        <h2>Output / Examples:</h2>
-        <p>The result will be an array of arrays or of tuples (in C an array of Pair) or a string, each subarray having two elements, first the number whose squared divisors is a square and then the sum of the squared divisors.</p>
-      <div class = "codeWindow"> 
-        <p>list_squared(1, 250) --> [[1, 1], [42, 2500], [246, 84100]]</p>
-        <p>list_squared(42, 250) --> [[42, 2500], [246, 84100]]</p>
+      <a href="assets/img/challenges/recreation-one.jpg" data-gall="portfolioGallery" class="venobox" title="Integers: Recreation One"><i class="bx bx-plus"></i>View Code</a>
       
     </div>
 
   </div>
+
+  <!-- Instructions and Examples -->
+  <div class="portfolio-description">
+
+      <h2>Instructions:</h2>
+      <p>Divisors of 42 are : 1, 2, 3, 6, 7, 14, 21, 42. These divisors squared are: 1, 4, 9, 36, 49, 196, 441, 1764. The sum of the squared divisors is 2500 which is 50 * 50, a square!
+
+        Given two integers m, n (1 <= m <= n) we want to find all integers between m and n whose sum of squared divisors is itself a square. 42 is such a number.</p>
+      <h2>Output / Examples:</h2>
+      <p>The result will be an array of arrays or of tuples (in C an array of Pair) or a string, each subarray having two elements, first the number whose squared divisors is a square and then the sum of the squared divisors.</p>
+    
+      <div class = "codeWindow"> 
+        <p>list_squared(1, 250) --> [[1, 1], [42, 2500], [246, 84100]]</p>
+        <p>list_squared(42, 250) --> [[42, 2500], [246, 84100]]</p>
+      </div>
+
+  </div>
+
 </section><!-- End Challenge Details Section -->
 
   </main><!-- End #main -->
+
   <script>
 
     function challenge() {
@@ -91,7 +109,7 @@
       var m = parseInt(document.getElementById('m').value);
       var n = parseInt(document.getElementById('n').value);
     
-      // data validations 
+      // Data validations 
       if (m < 1){
         document.getElementById('errorM').innerHTML = "This value must be greater than 1 ";
     
@@ -102,40 +120,49 @@
       }
     
       let resultsArr = [];
-        for(var i = m; i < n; i++){
-            let temp = findDivisors(i);
-            if (temp !== false){
-                resultsArr.push(temp)
-            }
-        }
+
+      // Iterate through values between m and n
+      for(var i = m; i < n; i++){
+
+          // Use helper function to return tuples 
+          let temp = findDivisors(i);
+
+          if (temp !== false){
+              resultsArr.push(temp)
+          }
+      }
     
         // Generate a formatted string for output
         var string = "";
+        // Format the brackets around results to appear as an array
         for(var i = 0 ; i < resultsArr.length; i++){
           i == resultsArr.length-1? string += `[${resultsArr[i]}]` : string += `[${resultsArr[i]}] , `
         }
-        console.log(string)
+        
         // Output solution
         string == "" ? document.getElementById('result').innerHTML = "Sorry, No Tuples" : document.getElementById('result').innerHTML = string
     }
     
     // Helper function to find divisors
     function findDivisors(n){
+
         let tuple = [];
         let sum =0;
-    
+
+        // if i is a factor of n, double it and add to sum
         for(var i = 1; i <= n; i++){
             if(n % i === 0){
-                sum += i*i;
+                sum += i * i;
             }
         }
-    
+        
+        // If sum has an even square root push n and sum into a tuple
         if (Math.sqrt(sum) % 1 == 0){
             tuple.push(n)
             tuple.push(sum)
             return tuple
         }
-    
+        // Else return false
         return false;
     }
     

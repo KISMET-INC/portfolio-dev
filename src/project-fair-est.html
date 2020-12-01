@@ -3,7 +3,7 @@
 {% set page ='portfolio' %}
 
 {% block meta %}
-  <title>Project Details - Garage Sally</title>
+  <title>Project Details - Fair-EST</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 {% endblock %}
@@ -14,74 +14,80 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
+
       <div class="container">
     
         <div class="d-flex justify-content-between align-items-center">
           <h2>Project Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>FairEST</li>
+            <li>Fair-EST</li>
           </ol>
+
         </div>
-        
+
       </div>
+
     </section><!-- End Breadcrumbs -->
 
      <!-- ======= Portfolio Details Section ======= -->
      <section id="portfolio-details" class="portfolio-details">
+
       <div class="container">
 
         <div class="portfolio-details-container">
 
+          <!-- Image Carousel -->
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/fair_est/fair_est_big.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/fair_est/fair_est_big_02.jpg" class="img-fluid" alt="">
+            <img src="assets/img/projects/fair_est/fair_est_big.jpg" class="img-fluid" alt="">
+            <img src="assets/img/projects/fair_est/fair_est_big_02.jpg" class="img-fluid" alt="">
           </div>
 
           <div class="portfolio-info">
+
             <h3>Project information</h3>
             <ul>
-              <li><strong>Name</strong>: FairEST</li>
+              <li><strong>Name</strong>: Fair-EST</li>
               <li><strong>Category</strong>: Full Stack Development</li>
-              <li><strong>Tech</strong>: Python | Django ORM | JQuery</li>
-              <li><strong>Project date</strong>: 01 Sept, 2020</li>
+              <li><strong>Tech</strong>: Python | Django ORM | JQuery | SQL </li>
+              <li><a href = "https://github.com/KISMET-INC/FairEst" target = "_blank"><b>+ View on GitHub</b></a></li>
             </ul>
+
           </div>
 
         </div>
 
         <div class="portfolio-description">
-          <h2>Estimates grooming services</h2>
-          <p>
-            ● Developed an algorithm in <b>Python</b> that estimates grooming services and improves customer
-            confidence by offering clear, consistent itemized service estimates based on weight and coat type instead of by breed.
-          </p>
-          <p>
-            ● Used the <b>Django ORM</b> for a clean interface between server and database, as well as intuitive
-            relationships between O OP models for a smooth UX
-          </p>
-          <p>
-            ● Wrote scripts in <b>JQuery</b> and Javascript that enhance the user experience with exciting dynamic
-            animations and interactions.
-          </p>
-          </p>
+          <h2>An internet application that generates itemized grooming estimates</h2>
+  
+          <ul>
+            <li>Developed an algorithm in <b>Python</b> that generates consistent and itemized service estimates based on a dogs weight and coat type instead of by breed, improving customer confidence in the services provided increasing profits through customer loyalty.</li>
+            <p></p>
+            <li>Used the <b>Django ORM</b> with an <b>SQL</b> database to implement <b>one-to-one</b> and <b>one-to-many</b> relationships between the models in order to store information quickly and efficiently creating an intuitive user experience when retrieving data.</li>
+            <p></p>
+            <li>Wrote scripts in <b>JQuery</b> and <b>Javascript</b> that enhance the user experience with exciting dynamic animations and interactions.</li>
+            <p></p>
+          </ul>     
+  
         </div>
+
         <div id = 'questions'>
           <h2 class = "click-tech">Why did I choose this technology?  </h2>
-          <p class = "dropdown-tech hide">Lorem</p>
+          <p class = "dropdown-tech hide">**Coming Soon**</p>
           <h2  class = "click-challenge">What challenges did I face?</h2> 
-          <p class = "dropdown-challenge hide">Lorem</p> 
+          <p class = "dropdown-challenge hide">**Coming Soon**</p> 
           <h2 class = "click-different">What would I have done differently?</h2> 
-          <p class = "dropdown-different hide">Lorem</p> 
+          <p class = "dropdown-different hide">**Coming Soon**</p> 
           <h2 class = "click-learn">What did I learn?</h2> 
-          <p class = "dropdown-learn hide">Lorem</p> 
+          <p class = "dropdown-learn hide">**Coming Soon**</p> 
           <h2 class = "click-plans">Plans for the future of this project?</h2> 
-          <p class = "dropdown-plans hide">Lorem</p> 
+          <p class = "dropdown-plans hide">**Coming Soon**</p> 
       </div>
 
-      </div>
-    </section><!-- End Portfolio Details Section -->
+    </div>
 
-  </main><!-- End #main -->
+  </section><!-- End Portfolio Details Section -->
+  
+</main><!-- End #main -->
 
 {% endblock %}

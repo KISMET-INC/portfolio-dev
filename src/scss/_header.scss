@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+#header::-webkit-scrollbar {
+  display: none;
+}
 #header {
   position: fixed;
   top: 0;
@@ -13,6 +16,9 @@
   padding: 0 15px;
   background: darken($secondary, 1);
   overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
 
   .profile {
 

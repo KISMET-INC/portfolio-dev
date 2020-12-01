@@ -57,8 +57,7 @@ section {
       }
       @media (max-width:500px ) {
         li {
-         
-          font-size: 12px;
+          font-size: 15px;
         }
       }
 
@@ -71,164 +70,9 @@ section {
     p:last-child {
       margin-bottom: 0;
     }
-  
-
-}
-
-
-}
-
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts {
-  padding-bottom: 30px;
-
-  .count-box {
-    padding: 30px;
-    width: 100%;
-
-    i {
-      display: block;
-      font-size: 44px;
-      color: $primary;
-      float: left;
-    }
-
-    span {
-      font-size: 48px;
-      line-height: 40px;
-      display: block;
-      font-weight: 700;
-      color: $secondary;
-      margin-left: 60px;
-    }
-
-    p {
-      padding: 15px 0 0 0;
-      margin: 0 0 0 60px;
-      font-family: $font-primary;
-      font-size: 14px;
-      color: lighten($secondary, 15);
-    }
-
-    a {
-      font-weight: 600;
-      display: block;
-      margin-top: 20px;
-      color: lighten($secondary, 15);
-      font-size: 15px;
-      font-family: $font-secondary;
-      transition: ease-in-out 0.3s;
-      &:hover {
-        color: lighten($secondary, 30);
-      }
-    }
-  }
-
-}
-
-/*--------------------------------------------------------------
-# Akills
---------------------------------------------------------------*/
-.skills {
-
-  .progress {
-    height: 50px;
-    display: block;
-    background: none;
-  }
-  .progress .skill {
-    padding: 10px 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: $font-secondary;
-    color: $secondary;
-  }
-  .progress .skill .val {
-    float: right;
-    font-style: normal;
-  }
-
-  .progress-bar-wrap {
-    background: lighten($secondary, 86);
-  }
-
-  .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: .9s;
-    background-color: $primary;
   }
 }
 
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
-.resume {
-
-  .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: $secondary;
-  }
-  
-  .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid lighten($secondary, 30);
-    position: relative;
-
-    h4 {
-      line-height: 18px;
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: $font-secondary;
-      color: $secondary;
-      margin-bottom: 10px;
-    }
-
-    h5 {
-      font-size: 16px;
-      background: lighten($secondary, 88);
-      padding: 5px 15px;
-      display: inline-block;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-
-      li {
-        padding-bottom: 10px;
-      }
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  .resume-item::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
-    background: $white;
-    border: 2px solid lighten($secondary, 30);
-  }
-
-
-}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -317,9 +161,6 @@ section {
       a + a {
         border-left: 1px solid lighten($primary, 10);
       }
-
-
-
     }
 
     &:hover {
@@ -341,7 +182,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Challenges
 --------------------------------------------------------------*/
 .services {
 
@@ -504,6 +345,7 @@ section {
     background: #fff;
     width: 100%;
     box-shadow: 0 0 24px 0 rgba(0, 0 , 0, .12);
+    margin-bottom: 30px;
 
     i {
       font-size: 20px;
@@ -562,7 +404,7 @@ section {
       }
     }
 
-    .email:hover, .address:hover, .phone:hover {
+    .email:hover, .linkedin:hover, .github:hover, .phone:hover {
       i {
         background: $primary;
         color: $white;
@@ -931,6 +773,17 @@ textarea {
     margin-top: 30px;
   }
 
+}
+@media (max-width: 499px) {
+
+  .challenge-box-result {
+    width:90%; 
+  }
+
+}
+
+.purple {
+  color: purple;
 }
 
 .paragraph {
