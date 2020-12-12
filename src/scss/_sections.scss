@@ -631,6 +631,10 @@ section {
       padding: 0;
     }
 
+    li {
+      padding-bottom: 15px;
+    }
+
     .blue {
       color: $primary ;
     }
@@ -849,6 +853,7 @@ iframe {
 }
 
 .video_projects {
+
   display:flex;
  }
  
@@ -856,10 +861,14 @@ iframe {
  @media (max-width: 1000px) {
    .video_projects{
      display: unset;
+
+     video {
+       width: 100%;
+     }
    }
   }
  
  
  video {
-   width:95%;
+   width:70%;
  }
